@@ -1,9 +1,8 @@
-package bean;
+package com.github.xiaofeng2233.bean;
 
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 @Data
 public class Video implements Serializable {

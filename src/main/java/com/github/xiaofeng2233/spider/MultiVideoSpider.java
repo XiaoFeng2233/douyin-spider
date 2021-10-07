@@ -1,8 +1,8 @@
-package spider;
+package com.github.xiaofeng2233.spider;
 
 
-import bean.Video;
-import bean.VideoInfo;
+import com.github.xiaofeng2233.bean.Video;
+import com.github.xiaofeng2233.bean.VideoInfo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -13,7 +13,6 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class MultiVideoSpider {
 

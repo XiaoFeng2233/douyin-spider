@@ -1,4 +1,4 @@
-package bean;
+package com.github.xiaofeng2233.bean;
 
 import lombok.Data;
 
