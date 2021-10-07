@@ -35,7 +35,6 @@ public class MultiVideoSpider {
      * @param maxCount
      */
     public MultiVideoSpider(String userUrl, int maxCount) {
-        userUrl.contains("");
         this.userUrl = userUrl;
         this.maxCount = maxCount;
     }
