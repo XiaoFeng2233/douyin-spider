@@ -1,4 +1,4 @@
-package com.github.xiaofeng2233.bean;
+package com.github.xiaofeng2233.douyinspider.bean;
 
 import lombok.Data;
 

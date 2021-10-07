@@ -1,7 +1,7 @@
-package com.github.xiaofeng2233.spider;
+package com.github.xiaofeng2233.douyinspider.spider;
 
-import com.github.xiaofeng2233.bean.Video;
-import com.github.xiaofeng2233.bean.VideoInfo;
+import com.github.xiaofeng2233.douyinspider.bean.Video;
+import com.github.xiaofeng2233.douyinspider.bean.VideoInfo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
