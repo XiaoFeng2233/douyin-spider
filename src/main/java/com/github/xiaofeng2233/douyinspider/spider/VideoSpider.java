@@ -46,7 +46,7 @@ public class VideoSpider {
         videoInfo.setDuration((Integer) video.get("duration"));
         videoInfo.setWidth((Integer) video.get("width"));
         videoInfo.setHeight((Integer) video.get("height"));
-        videoInfo.setVideoUrl(String.valueOf(video.getJSONObject("play_addr").getJSONArray("url_list").get(0)));
+        videoInfo.setVideoUrl(String.valueOf(video.getJSONObject("play_addr").getJSONArray("url_list").get(0)).replace("playwm","play"));
         videoInfo.setCoverUrl(String.valueOf(video.getJSONObject("cover").getJSONArray("url_list").get(0)));
         videoInfo.setDynamicCoverUrl(String.valueOf(video.getJSONObject("dynamic_cover").getJSONArray("url_list").get(0)));
         videoInfo.setRatio(String.valueOf(video.get("ratio")));

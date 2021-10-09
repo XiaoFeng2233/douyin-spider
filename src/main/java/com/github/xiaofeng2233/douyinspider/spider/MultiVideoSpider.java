@@ -1,6 +1,7 @@
 package com.github.xiaofeng2233.douyinspider.spider;
 
 
+import com.github.xiaofeng2233.douyinspider.Application;
 import com.github.xiaofeng2233.douyinspider.bean.Video;
 import com.github.xiaofeng2233.douyinspider.bean.VideoInfo;
 import com.alibaba.fastjson.JSON;
