@@ -2,7 +2,7 @@
 @packages
 @argfile
 -classpath
-'D:/mavenrepository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar;D:/mavenrepository/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2.jar;D:/mavenrepository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar;D:/mavenrepository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar;D:/mavenrepository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar;D:/mavenrepository/org/jetbrains/annotations/13.0/annotations-13.0.jar;D:/mavenrepository/com/alibaba/fastjson/1.2.78/fastjson-1.2.78.jar'
+'D:/mavenrepository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar;D:/mavenrepository/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2.jar;D:/mavenrepository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar;D:/mavenrepository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar;D:/mavenrepository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar;D:/mavenrepository/org/jetbrains/annotations/13.0/annotations-13.0.jar;D:/mavenrepository/com/alibaba/fastjson/1.2.78/fastjson-1.2.78.jar;D:/mavenrepository/cn/hutool/hutool-all/5.7.13/hutool-all-5.7.13.jar'
 -encoding
 'UTF-8'
 -protected
@@ -20,17 +20,20 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Douyin-Spider 0.1.0 API'
+'Douyin-Spider 0.3.0 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/xiaofeng/Desktop/DouyinSpider/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Douyin-Spider 0.1.0 API'
+'Douyin-Spider 0.3.0 API'
+com.github.xiaofeng2233.douyinspider
 com.github.xiaofeng2233.douyinspider.bean
 com.github.xiaofeng2233.douyinspider.spider
+'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/Application.java'
 'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/bean/Video.java'
 'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/bean/VideoInfo.java'
+'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/Downloader.java'
 'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/spider/MultiVideoSpider.java'
 'C:/Users/xiaofeng/Desktop/DouyinSpider/src/main/java/com/github/xiaofeng2233/douyinspider/spider/VideoSpider.java'
 D:\mavenrepository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar = 1629123565909
@@ -40,18 +43,19 @@ D:\mavenrepository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.0\kotlin-stdlib
 D:\mavenrepository\org\jetbrains\kotlin\kotlin-stdlib\1.4.10\kotlin-stdlib-1.4.10.jar = 1633664939264
 D:\mavenrepository\org\jetbrains\annotations\13.0\annotations-13.0.jar = 1633664938957
 D:\mavenrepository\com\alibaba\fastjson\1.2.78\fastjson-1.2.78.jar = 1629981334148
+D:\mavenrepository\cn\hutool\hutool-all\5.7.13\hutool-all-5.7.13.jar = 1633779109684
 C:\Users\xiaofeng\Desktop\DouyinSpider\src\main\java = 1633608502885
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\allclasses-frame.html = 1633694997220
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\allclasses-noframe.html = 1633694997221
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\constant-values.html = 1633694997181
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\deprecated-list.html = 1633694997219
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\help-doc.html = 1633694997225
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\index-all.html = 1633694997215
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\index.html = 1633694997222
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-frame.html = 1633694997159
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-summary.html = 1633694997223
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-tree.html = 1633694997213
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\package-list = 1633694997157
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\script.js = 1633694997228
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\serialized-form.html = 1633694997189
-C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\stylesheet.css = 1633694997227
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\allclasses-frame.html = 1633793840161
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\allclasses-noframe.html = 1633793840162
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\constant-values.html = 1633793840112
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\deprecated-list.html = 1633793840159
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\help-doc.html = 1633793840168
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\index-all.html = 1633793840157
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\index.html = 1633793840163
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-frame.html = 1633793840088
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-summary.html = 1633793840165
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\overview-tree.html = 1633793840153
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\package-list = 1633793840087
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\script.js = 1633793840171
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\serialized-form.html = 1633793840121
+C:\Users\xiaofeng\Desktop\DouyinSpider\target\apidocs\stylesheet.css = 1633793840170

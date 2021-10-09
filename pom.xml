@@ -6,11 +6,11 @@
 
     <groupId>io.github.xiaofeng2233</groupId>
     <artifactId>DouyinSpider</artifactId>
-    <version>0.1.0</version>
+    <version>0.3.0</version>
     <packaging>jar</packaging>
     <name>Douyin-Spider</name>
     <description>A Simple Spider For Douyin</description>
-    <url>https://github.com/XiaoFeng2233/douyin-spiderhttps://github.com/XiaoFeng2233/douyin-spider</url>
+    <url>https://github.com/XiaoFeng2233/douyin-spider</url>
 
     <licenses>
         <license>
@@ -73,6 +73,36 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.github.xiaofeng2233.douyinspider.Application</mainClass> <!-- 此处为主入口-->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.github.xiaofeng2233.douyinspider.Application</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <profiles>
         <profile>
             <id>disable-javadoc-doclint</id>
