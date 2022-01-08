@@ -6,7 +6,7 @@
 <center>
 <img src="https://img.shields.io/badge/licence-MIT-brightgreen?style=for-the-badge">
 <img src="https://img.shields.io/badge/JDK-8+-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/version-0.3.0-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/version-0.3.1-red?style=for-the-badge">
 </center>
 
 
