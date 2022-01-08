@@ -19,7 +19,7 @@
 <dependency>
   <groupId>io.github.xiaofeng2233</groupId>
   <artifactId>DouyinSpider</artifactId>
-  <version>0.3.0</version>
+  <version>0.3.1</version>
 </dependency>
 ```
 
