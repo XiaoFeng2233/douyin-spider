@@ -10,6 +10,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class VideoSpider {
     private String videoUrl;
@@ -26,6 +27,7 @@ public class VideoSpider {
         Request request = getRequest(api);
         Response response = client.newCall(request).execute();
         String json = response.body().string();
+        System.out.println(json);
         JSONObject jsonObject = JSON.parseObject(json);
         JSONArray itemList = jsonObject.getJSONArray("item_list");
         JSONObject item = itemList.getJSONObject(0);
@@ -33,6 +35,7 @@ public class VideoSpider {
         String Description = String.valueOf(item.get("desc"));
         JSONObject author = item.getJSONObject("author");
         JSONObject video = item.getJSONObject("video");
+        JSONObject music = item.getJSONObject("music");
         Video v = new Video();
         v.setVideoDescription(Description);
         v.setLikeCount((Integer) statistics.get("digg_count"));
@@ -41,7 +44,12 @@ public class VideoSpider {
         v.setAuthorNickName(String.valueOf(author.get("nickname")));
         v.setAuthorSignature(String.valueOf(author.get("signature")));
         v.setAuthorAvatar(String.valueOf(author.getJSONObject("avatar_larger").getJSONArray("url_list").get(0)));
-
+        long createdTime = item.getLongValue("create_time");
+        v.setCreatedTime(new Date(createdTime));
+        v.setAuthorAccountId(author.getString("unique_id"));
+        v.setShareUrl(item.getString("share_url"));
+        String audioUrl = music.getJSONObject("play_url").getJSONArray("url_list").getString(0);
+        v.setAudioUrl(audioUrl);
         VideoInfo videoInfo = new VideoInfo();
         videoInfo.setDuration((Integer) video.get("duration"));
         videoInfo.setWidth((Integer) video.get("width"));

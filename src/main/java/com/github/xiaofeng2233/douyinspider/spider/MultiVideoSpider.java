@@ -97,6 +97,7 @@ public class MultiVideoSpider {
                 video.setAuthorNickName(String.valueOf(author.get("nickname")));
                 video.setAuthorSignature(String.valueOf(author.get("signature")));
                 video.setVideoDescription(Description);
+                video.setAuthorAccountId(String.valueOf(author.get("unique_id")));
                 JSONObject videoObject = o.getJSONObject("video");
                 VideoInfo videoInfo = new VideoInfo();
                 videoInfo.setDuration((Integer) videoObject.get("duration"));
@@ -143,6 +144,7 @@ public class MultiVideoSpider {
                 video.setAuthorNickName(String.valueOf(author.get("nickname")));
                 video.setAuthorSignature(String.valueOf(author.get("signature")));
                 video.setVideoDescription(Description);
+                video.setAuthorAccountId(String.valueOf(author.get("unique_id")));
                 JSONObject videoObject = o.getJSONObject("video");
                 VideoInfo videoInfo = new VideoInfo();
                 videoInfo.setDuration((Integer) videoObject.get("duration"));
