@@ -6,7 +6,7 @@
 
     <groupId>io.github.xiaofeng2233</groupId>
     <artifactId>DouyinSpider</artifactId>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <packaging>jar</packaging>
     <name>Douyin-Spider</name>
     <description>A Simple Spider For Douyin</description>

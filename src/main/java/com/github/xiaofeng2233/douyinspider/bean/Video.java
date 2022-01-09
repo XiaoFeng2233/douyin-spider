@@ -55,4 +55,8 @@ public class Video implements Serializable {
      * 纯音频文件地址
      */
     private String audioUrl;
+    /**
+     * 视频唯一Id
+     */
+    private String videoId;
 }

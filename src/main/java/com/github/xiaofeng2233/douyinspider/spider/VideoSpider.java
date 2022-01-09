@@ -27,7 +27,6 @@ public class VideoSpider {
         Request request = getRequest(api);
         Response response = client.newCall(request).execute();
         String json = response.body().string();
-        System.out.println(json);
         JSONObject jsonObject = JSON.parseObject(json);
         JSONArray itemList = jsonObject.getJSONArray("item_list");
         JSONObject item = itemList.getJSONObject(0);
@@ -44,8 +43,51 @@ public class VideoSpider {
         v.setAuthorNickName(String.valueOf(author.get("nickname")));
         v.setAuthorSignature(String.valueOf(author.get("signature")));
         v.setAuthorAvatar(String.valueOf(author.getJSONObject("avatar_larger").getJSONArray("url_list").get(0)));
+        v.setVideoId(statistics.getString("aweme_id"));
         long createdTime = item.getLongValue("create_time");
-        v.setCreatedTime(new Date(createdTime));
+        v.setCreatedTime(new Date(createdTime*1000));
+        v.setAuthorAccountId(author.getString("unique_id"));
+        v.setShareUrl(item.getString("share_url"));
+        String audioUrl = music.getJSONObject("play_url").getJSONArray("url_list").getString(0);
+        v.setAudioUrl(audioUrl);
+        VideoInfo videoInfo = new VideoInfo();
+        videoInfo.setDuration((Integer) video.get("duration"));
+        videoInfo.setWidth((Integer) video.get("width"));
+        videoInfo.setHeight((Integer) video.get("height"));
+        videoInfo.setVideoUrl(String.valueOf(video.getJSONObject("play_addr").getJSONArray("url_list").get(0)).replace("playwm","play"));
+        videoInfo.setCoverUrl(String.valueOf(video.getJSONObject("cover").getJSONArray("url_list").get(0)));
+        videoInfo.setDynamicCoverUrl(String.valueOf(video.getJSONObject("dynamic_cover").getJSONArray("url_list").get(0)));
+        videoInfo.setRatio(String.valueOf(video.get("ratio")));
+
+        v.setVideoInfo(videoInfo);
+        return v;
+    }
+
+    public Video getVideoById(String videoId) throws IOException{
+        String api = String.format(this.API_URL, videoId);
+        OkHttpClient client = getHttpClient();
+        Request request = getRequest(api);
+        Response response = client.newCall(request).execute();
+        String json = response.body().string();
+        JSONObject jsonObject = JSON.parseObject(json);
+        JSONArray itemList = jsonObject.getJSONArray("item_list");
+        JSONObject item = itemList.getJSONObject(0);
+        JSONObject statistics = item.getJSONObject("statistics");
+        String Description = String.valueOf(item.get("desc"));
+        JSONObject author = item.getJSONObject("author");
+        JSONObject video = item.getJSONObject("video");
+        JSONObject music = item.getJSONObject("music");
+        Video v = new Video();
+        v.setVideoDescription(Description);
+        v.setLikeCount((Integer) statistics.get("digg_count"));
+        v.setShareCount((Integer) statistics.get("share_count"));
+        v.setCommentCount((Integer) statistics.get("comment_count"));
+        v.setAuthorNickName(String.valueOf(author.get("nickname")));
+        v.setAuthorSignature(String.valueOf(author.get("signature")));
+        v.setAuthorAvatar(String.valueOf(author.getJSONObject("avatar_larger").getJSONArray("url_list").get(0)));
+        v.setVideoId(statistics.getString("aweme_id"));
+        long createdTime = item.getLongValue("create_time");
+        v.setCreatedTime(new Date(createdTime*1000));
         v.setAuthorAccountId(author.getString("unique_id"));
         v.setShareUrl(item.getString("share_url"));
         String audioUrl = music.getJSONObject("play_url").getJSONArray("url_list").getString(0);

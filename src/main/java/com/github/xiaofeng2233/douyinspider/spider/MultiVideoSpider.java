@@ -90,6 +90,7 @@ public class MultiVideoSpider {
                 JSONObject author = (JSONObject) o.get("author");
                 String Description = String.valueOf(o.get("desc"));
                 Video video = new Video();
+                video.setVideoId(statistics.getString("aweme_id"));
                 video.setCommentCount((Integer) statistics.get("comment_count"));
                 video.setShareCount((Integer) statistics.get("share_count"));
                 video.setLikeCount((Integer) statistics.get("digg_count"));
@@ -137,6 +138,7 @@ public class MultiVideoSpider {
                 JSONObject author = (JSONObject) o.get("author");
                 String Description = String.valueOf(o.get("desc"));
                 Video video = new Video();
+                video.setVideoId(statistics.getString("aweme_id"));
                 video.setCommentCount((Integer) statistics.get("comment_count"));
                 video.setShareCount((Integer) statistics.get("share_count"));
                 video.setLikeCount((Integer) statistics.get("digg_count"));
