@@ -6,7 +6,7 @@
 <center>
 <img src="https://img.shields.io/badge/licence-MIT-brightgreen?style=for-the-badge">
 <img src="https://img.shields.io/badge/JDK-8+-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/version-0.3.1-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/version-0.3.2-red?style=for-the-badge">
 </center>
 
 
@@ -19,7 +19,7 @@
 <dependency>
   <groupId>io.github.xiaofeng2233</groupId>
   <artifactId>DouyinSpider</artifactId>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
 </dependency>
 ```
 
